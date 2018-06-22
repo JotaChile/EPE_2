@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Perros</ion-title>
+       <ion-buttons end>
+           <button ion-button icon-only color="royal" (click)='regresar()'>
+             <ion-icon name="md-return-left"></ion-icon>
+           </button>
+         </ion-buttons>
+       
+   </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+
+        <img src="../../assets/imgs/logoDogLace.png" alt="logo" class="center">
+        <p class="center">Coming soon...</p>
+      </ion-item>
+      <br>
+<ion-list>
+    <ion-item>
+        <ion-label floating>Nombre de tu mascota:</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="model.nombre"></ion-input>
+      </ion-item>            
+      <ion-item>
+        <ion-label floating>Raza de tu mascota:</ion-label>
+        <ion-textarea   type="text" row="10" [(ngModel)]="model.raza"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Edad de tu mascota:</ion-label>
+        <ion-textarea   type="text" row="10" [(ngModel)]="model.edad"></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Contacto:</ion-label>
+          <ion-textarea   type="text" row="10" [(ngModel)]="model.contacto"></ion-textarea>
+        </ion-item>
+      <ion-item>
+          <button type="button" (click)="addMessage()" ion-button full >Registrar</button>
+      </ion-item>
+</ion-list>
+
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let message of messages">
+      <ion-item>
+        <h3>Nombre: {{message.nombre}}</h3>
+        <p>Raza: {{message.raza}}</p>
+        <p>Edad: {{message.edad}}</p>
+        <p>Contacto: {{message.contacto}}</p>
+      
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteMessage(message.$key)">
+        <ion-icon name="ios-trash"></ion-icon>
+        Borrar
+      </button>
+      <button ion-button color="success" (click)="updateMessage(message)">
+          <ion-icon name="ios-create"></ion-icon>
+          Editar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="danger">
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)='toast3()'>
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

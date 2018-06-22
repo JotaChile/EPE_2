@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)='cerrar()'>
+              <ion-icon name="close-circle"></ion-icon>
+            </button>
+          </ion-buttons>
+  <ion-title>My Pet HOME</ion-title>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+          Bienvenido
+        </ion-card-header>
+      
+        <ion-list>
+          <button ion-item>
+            <ion-icon name="chatbubbles" item-start></ion-icon>
+            MyPet Social
+          </button>
+      
+          <button ion-item>
+            <ion-icon name="pin" item-start></ion-icon>
+            Busca tu mascota
+          </button>
+      
+          <button ion-item>
+            <ion-icon name="heart" item-start></ion-icon>
+            BuscaParejas
+          </button>
+      
+          <button ion-item>
+            <ion-icon name="medical" item-start></ion-icon>
+            Enlace Veterinario
+          </button>
+      
+          <button ion-item>
+            <ion-icon name="pulse" item-start></ion-icon>
+            TRM
+          </button>
+      
+          <button ion-item (click)='adopcion()'>
+            <ion-icon name="bowtie" item-start></ion-icon>
+            Adopcion
+          </button>
+      
+        </ion-list>
+      </ion-card>
+</ion-content>
